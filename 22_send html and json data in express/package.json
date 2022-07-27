@@ -1,0 +1,14 @@
+{
+  "name": "22_send-html-and-json-data-in-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zain",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

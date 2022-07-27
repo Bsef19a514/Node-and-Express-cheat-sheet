@@ -1,0 +1,3 @@
+when you share your node project to someone, send every thing except "node_modules" beacuse it is too bulky to send or upload on github.
+To upload every thing on git/Github except "node_modules",  create a folder ".gitignore" and add the name of folders or files you dont want to upload.
+The receiver can get that folder by typing "npm install" on terminal.

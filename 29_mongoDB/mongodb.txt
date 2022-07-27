@@ -1,0 +1,71 @@
+Data dir:
+C:\Program Files\MongoDB\Server\5.0\data\
+log dir:
+C:\Program Files\MongoDB\Server\5.0\log\
+-----------------------------------------------------------------------
+Some famous ORMs for mongodb :
+1) mongoose
+2) mongo client
+-----------------------------------------------------------------------------
+To check the version of mongod type on cmd
+"C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe" --version
+
+To check the version of mongo ,type on cmd
+"C:\Program Files\MongoDB\Server\5.0\bin\mongo.exe" --version
+
+By defauld mongo run on port: 27017
+
+to run mongo on cmd type
+"C:\Program Files\MongoDB\Server\5.0\bin\mongo.exe"
+or
+mongo
+
+to list all the databases:
+show dbs
+
+to create a db:
+use dbname  //this will activate the given db if already exists else create a new one.
+But we need to atleast add one document into it so that it can be shown using "show dbs" command.
+
+to create a new collection(table) and insert a document into it in a database:
+db.collectioname.insertOne({name:"JS",type:"full stack",videos:56, active:true})
+
+to check out the current active db:
+db
+
+to findout number of collections in current db:
+show collections
+
+to show the documents(data) in a collection:
+db.collectionname.find()
+
+to move out of mongo environment:
+quit()
+or ctrl+c
+------------------------------------------------------------------------------------
+to insert or create documents in db:
+
+1) db.collectionName.insertOne({object})
+2) db.collectionName.insertMany([array of objects])
+------------------------------------------------------------------------------------
+to read documents from db:
+db.collectionName.find(query,projection)
+
+0)  db.collection1.find().pretty()   			//show all the docs (data) in a collection
+1)  db.collection1.find({name:"nodeJs"}).pretty()   	//getting data based on query
+2)  db.collection1.find({name:"nodeJs"},{type:1}).pretty()	//getting data based on query and only showing specific fields but_idis always shown--> 0 means dont show 1 means show
+3)  db.collection1.find({name:"nodeJs"},{_id:0,type:1}).pretty()	//getting data based on query and not showing query()
+4)  db.collection1.find({active:true}).pretty().limit(1) //to limit the records returned
+5)  db.collection1.findOne({active:true}) //another method to get only one document // Note:pretty() method does not work on FindOne()
+6)  db.collection1.find({active:true}).pretty().limit(1).skip(1)   //to get 2nd record found based on condition 
+ 
+------------------------------------------------------------------------------------
+db.collectionName.updateOne({filter},{$set{update}})   /to update only one document matching the given condition
+0) db.collection1.updateOne({type:db},{$set:{name:"mongo"}})
+
+1) db.collection1.updateMany({active:true},{$set:{active:false}})   //to update all the records matching the condition.
+------------------------------------------------------------------------------------
+1)   db.collection1.deleteMany({condition})
+     example:  db.collection1.deleteMany({type:"db"})
+2)   to delete all the docs from a collection in db:
+      db.collection1.deleteMany({})

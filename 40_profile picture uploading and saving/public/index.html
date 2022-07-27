@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <script >
+    const validate = () => {
+        const password = document.getElementById("password")
+        const cpassword =document.getElementById("cpassword")
+        if(password.value){
+            if ((password.value == cpassword.value)) {
+        
+            return true
+            } else {
+                
+                return false
+            }
+        }
+        alert("false")
+        return false
+    }
+</script>
+</head>
+
+
+
+<body>
+    <h1>Signup</h1>
+    <form name="signup" action="/signup" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+        <label for="">Name:</label>
+        <input type="text" name="name">
+        <br>
+        <br>
+        <label for="">Email:</label>
+        <input type="text" name="email">
+        <br>
+        <br>
+        <label for="">Phone:</label>
+        <input type="text" name="phone">
+        <br>
+        <br>
+        <label for="">Age:</label>
+        <input type="text" name="age">
+        <br>
+        <br>
+        <label for="">Profile pic:</label>
+        <input type="file" name="image">
+        <br>
+        <br>
+        <label for="">Password</label>
+        <input type="text" name="password" id="password">
+        <br>
+        <br>
+        <label for="">Confirm Password:</label>
+        <input type="text" name="cpassword" id="cpassword">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

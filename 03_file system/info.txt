@@ -1,0 +1,4 @@
+JS core modules is same as javascript libraries.
+A set of functions your want to include in your application.
+
+Node.js has a set of buit-in modules which you can use without any futher installation.

@@ -1,0 +1,18 @@
+REPL is a node feature usefull for expermenting nodejs codes and debug javascript codes.
+R--> Read
+E--> Eval
+P--> Print
+L--> LOOP
+
+---------------------------
+As soon as we type "node" in the terminal we enters in the REPL Environment.
+".exit" to move out of the REPL Environment.
+
+---------------------------
+we can perform following thing inside REPL:
+1) Evaluate Js expressions
+2) use Variables.
+3) Multiline code
+4) use "_" to get the last result
+5) we can use the editor mode by typing ".editor" ctrl +D to finish the code (run it) in editor mode.
+6) use tab tab to see all js builtin keywords and their usage. 

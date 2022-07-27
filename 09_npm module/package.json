@@ -1,0 +1,16 @@
+{
+    "name": "09_npm-module",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Zain node js notes",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "zain ahmad",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^5.0.1",
+        "validator": "^13.7.0"
+    }
+}
